@@ -74,6 +74,15 @@ sort(A, A+N, greater<int>());
 余り　%
 bitAND a|b
 
+# 絶対値
+```cpp
+using namespace std;
+#include<cstdlib>
+#include<cmath>
+int n = -3;
+cout << abs(n) << endl; // 3
+```
+
 # 各桁の和
 ```cpp
 int digit_sum(int d){
