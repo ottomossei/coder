@@ -62,16 +62,6 @@ myset.size();
 bitset<32> mybit;
 ```
 
-##  bit
-```cpp
-bitset<32> mybit;
-```
-
-##  vector宣言
-```cpp
-std::vector<int> myvec;
-```
-
 ##  for文
 ```cpp
 for(int i=0; i<N; i++) 処理;
