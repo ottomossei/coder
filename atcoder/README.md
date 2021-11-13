@@ -1,3 +1,16 @@
+##  テンプレート
+```cpp
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    cin.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+}
+
+```
+
 ##  高速化
 ```cpp
 //おまじない
@@ -25,9 +38,10 @@ cin >> N >> A >> B;
 cout << ans;
 ```
 ##  宣言
-##  int(整数),string(文字),double(小数,16桁)、bool(真偽)
+##  int(16bit整数),string(文字),double(小数,16桁)、bool(真偽)、long long（64bit整数）
 ```cpp
-int myint;
+int myint; //2^31-1(±2*10^9)まで
+long long mylong //2^63-1(±19*0^18)
 string mystring;
 double mydouble;
 bool mybool; //true, false
@@ -45,16 +59,26 @@ mystring.substr(n,m) //0から数えてn番目からm番目を抽出
 ```cpp
 // int（myint[0],myint[1],myint[2]）
 int myint[3];
-// vector [1,2,3]
-vevtor<int> myvector(3); // 0,1,2
+// vector 大きさ3
+vector<int> myvector(3); // 0,1,2番目の３つ
+// vector 初期化で宣言
+vector<int> myvector (3, 0); // 0,0,0のvector
+// 2次元vector
+vector<vector<int>> my2vector;
+// 2次元vectorアクセス
+myint  = my2vector[i][j];
+// vector 要素追加
+// 要素追加はメモリ量が足りない場合に確保するため、若干速度遅い
+myvector.push_back(myint);
 // set {1,2,3}
 set<int> myset;
 // set{vector<int>, vector<int>,,}
 set<vector<int>> myset;
 // set挿入
 myset.insert(obj);
-// setサイズ
+// set, vectorサイズ
 myset.size();
+// vector
 ```
 
 ##  bit
