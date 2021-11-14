@@ -1,4 +1,6 @@
 /*
+https://atcoder.jp/contests/abc227/tasks/abc227_d
+
 制限がN<10^11
 →オーダーを見積り、適切にforループを回す問題
 a<b<c,a*b*c<=Nを満たすなら、

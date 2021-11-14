@@ -15,7 +15,7 @@ int main(){
 ```cpp
 //おまじない
 //https://rsk0315.hatenablog.com/entry/2020/05/09/170315
-cin.tie(nullptr);//cinとcoutの同期
+cin.tie(nullptr);//cinとcoutの同期を切る
 ios_base::sync_with_stdio(false);//iostreamとstdioの同期を切る
 ```
 
@@ -28,6 +28,13 @@ ios_base::sync_with_stdio(false);//iostreamとstdioの同期を切る
 #include<bits/stdc++.h>
 using namespace std;
 ```
+
+##  手法
+- ～の個数を求めよ(制限が10^8以上)
+    - [オーダー見積](https://github.com/ottomossei/coder/blob/main/atcoder/src/ABC/ABC227C.cpp)
+- ～の最大値（最小値）を求めよ
+    - [決め打ち二分探索](https://github.com/ottomossei/coder/blob/main/atcoder/src/ABC/ABC227D.cpp)
+
 
 ##  入力(固定)
 ```cpp
@@ -88,9 +95,21 @@ bitset<32> mybit;
 
 ##  for文
 ```cpp
+// 一般的なfor文
 for(int i=0; i<N; i++) 処理;
 for(int i=0; i<N; i++){
-    処理
+    // 処理
+}
+
+// 範囲for文(range-based for loop)
+// 値保存のため、&（アドレス）による参照渡しに注意
+// &を抜くと保存されない
+for(long long &myll : myvector){ 
+    // cin >> myll; //　myvector[i]に代入
+}
+// 以下と同じ挙動
+for(long long myll=0; myll<myvector.size(); myll++){
+    // cin >> myvector[myll];
 }
 ```
 
