@@ -12,11 +12,11 @@ services:
       - ./workplace:/root/workplace
   gcc-cpp:
     image: 'gcc:9.2.1'
+    working_dir: '/root/'
     container_name: 'gcc'
     build:
       context: .
       dockerfile: DockerfileForCpp
     volumes:
       - ./workplace:/root/workplace
-    working_dir: '/root/'
     tty: true
